@@ -2,7 +2,7 @@ variable "internal_ips" {
   type = "map"
   default = {
     hostname = []
-    private_ip = []
+    private_ip_dns = []
   }
 }
 

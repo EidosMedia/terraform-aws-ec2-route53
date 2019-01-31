@@ -4,5 +4,5 @@ resource "aws_route53_record" "internal" {
   name    = "${element(var.internal_ips["hostname"],count.index)}.${var.domain}"
   type    = "${var.type}"
   ttl     = "${var.ttl}"
-  records = ["${element(var.internal_ips["private_ip"],count.index)}"]
+  records = ["${element(var.internal_ips["private_ip_dns"],count.index)}"]
 }
